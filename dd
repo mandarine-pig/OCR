@@ -1,0 +1,11 @@
+# csv to list
+data = pd.read_csv('dataset_word.csv')
+
+val_list = data.values.tolist()
+
+train_words = []
+for word in val_list :
+    train_words.append(word[0])
+
+# list to dictionary
+word_dict = {word: 1 for word in train_words}
